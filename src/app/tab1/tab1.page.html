@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true"> 
+  <ion-toolbar color="medium">
     <ion-title>
-      Tab 1
+      Calculadora Simples
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="dark">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+
+    <ion-item>
+      <ion-label position="stacked">Primeiro Número:</ion-label>
+      <ion-input type="number" [(ngModel)]="numero1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Segundo Número:</ion-label>
+      <ion-input type="number" [(ngModel)]="numero2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <strong>Resultado: </strong>{{ resultado }}
+      </ion-label>
+    </ion-item>
+
+    <ion-button expand="block" (click)="limpar()" color="medium">
+      <ion-icon slot="start" name="trash-outline"></ion-icon>
+      Limpar
+    </ion-button>
+
+    <ion-button expand="block" (click)="somar()" color="medium">
+      <ion-icon slot="start" name="add-outline"></ion-icon>
+      Somar
+    </ion-button>
+
+    <ion-button expand="block" (click)="subtrair()" color="medium">
+      <ion-icon slot="start" name="remove-outline"></ion-icon>
+      Subtrair
+    </ion-button>
+
+    <ion-button expand="block" (click)="dividir()" color="medium">
+      <ion-icon slot="start" name="resize-outline"></ion-icon>
+      Dividir
+    </ion-button>
+
+    <ion-button expand="block" (click)="multiplicar()" color="medium">
+      <ion-icon slot="start" name="close-outline"></ion-icon>
+      Multiplicar
+    </ion-button>
+
+  </ion-card>
+  
 </ion-content>
