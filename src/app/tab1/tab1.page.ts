@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  public numero1: any;
-  public numero2: any;
-  public resultado: any;
+  public numero1: number;
+  public numero2: number;
+  public resultado: number;
 
   constructor() {}
 
   public limpar(){
 
-    this.numero1 = "";
-    this.numero2 = "";
-    this.resultado = "";
+    this.numero1 = null;
+    this.numero2 = null;
+    this.resultado = null;
 
   }
 
