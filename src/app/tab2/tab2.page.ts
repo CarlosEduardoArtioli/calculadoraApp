@@ -7,6 +7,23 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  conta = "";
+  resultado: number;
+
+
   constructor() {}
+
+  addNumero(numero){
+
+    this.conta += numero;
+
+  }
+
+  limpar(){
+
+    this.conta = null;
+    this.resultado = null;
+
+  }
 
 }
